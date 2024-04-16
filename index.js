@@ -1,3 +1,5 @@
+// author: YUEN Ho Shing
+// UID: 3035930493 
 
 const DISEASES_TABLE = {
     "s0": {
@@ -68,6 +70,22 @@ const DISEASES_TABLE = {
             This can be treated with antibiotics, but if the condition is serious, surgery may be needed to remove the infected tissue.`
     }
 }
+
+const INTRO = 
+    `I am Mike YUEN, and this mini-game is the <b>individual reflective work of CCST9072 Smile! Teeth and Society [Section 2A, 2023]</b>.
+    
+    This mini-game aims to help you understand common dental problems and their symptoms in an interactive way. It serves as more of a popularisation of common dental diseases. If you are a dental student or even a dentist, just think of this game as a toy. XD
+    
+    Here is a tutorial for you to understand the game better:
+    
+    1. In the game, you will be shown a mysterious picture (some may contain hints) of the oral cavity. 
+    2. You need to determine which disease it shows by clicking the buttons containing the name of the disease and submitting the answer. Each question has only one disease.
+    3. Then you will know whether you are correct or wrong, and an explanation (e.g. the possible causes, the features, and even my personal interpretation based on extracurricular learning ) of the correct disease will be shown. 
+    4. After that, you can click the "Next Question" button to attempt the next question. 
+    5. Due to my level, there may be various errors in this game, please forgive me!
+    6. Just have fun! 
+
+    ps: the images in this game are from the internet and may be discomfortable. `
 
 var ans = -1;
 var selected = -1;
@@ -147,11 +165,15 @@ function show_explain(is_correct) {
     let explain = $("#explain");
     explain.css("display", "block");
 
-    explain.find("span").first().text(is_correct ? "Correct!" : "Wrong!");
-    explain.find("span").first().css("color", is_correct ? "lightgreen" : "red")
+    let span = explain.find("span");
+    span.css("font-size", "40px");
+    span.first().text(is_correct ? "Correct!" : "Wrong!");
+    span.first().css("color", is_correct ? "lightgreen" : "red");
+    span.eq(1).text("Answer: " + DISEASES_TABLE[`s${ans}`]["name"]);
+    span.eq(2).css("font-size", "20px");
 
-    explain.find("span").eq(1).text("Answer: " + DISEASES_TABLE[`s${ans}`]["name"]);
-    explain.find("p").first().html(DISEASES_TABLE[`s${ans}`]["explain"].replace(/\n/g, "<br><br>"));
+    explain.find("p").css("font-size", "20px");
+    explain.find("p").html(DISEASES_TABLE[`s${ans}`]["explain"].replace(/\n/g, "<br><br>"));
 }
 
 function reset() {
@@ -166,9 +188,28 @@ function reset() {
     $("#explain").css("display", "none");
 }
 
+function tutorial() {
+    let explain = $("#explain");
+    explain.css("display", "block");
+
+    let span = explain.find("span");
+
+    span.first().text("Welcome to the game! ");
+    span.css("font-size", "30px");
+
+    span.eq(1).text("Here is an introduction to this mini game: ");
+
+    span.eq(2).css("font-size", "25px");
+
+    explain.find("p").first().css("font-size", "16px");
+    console.log("asdasd");
+    explain.find("p").first().html(INTRO.replace(/\n/g, "<br>"));
+}
+
 function main() {
     set_button();
     make_new_question();
+    tutorial();
 }
 
 

@@ -3,25 +3,35 @@ author: YUEN Ho Shing
 UID: 3035930493 
 */
 
+#me {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+
+    margin: 0;
+    padding: 0;
+
+    font-size: 20px;;
+}
+
 body {
 
-    margin: 50px auto;
+    margin: auto;
+    margin-top: 20px;
 
     width: 900px;
     height: 600px;
 
     background-color: antiquewhite;
+}
 
-    & > h1 {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-        padding-bottom: 10px;
-    
-        /* height: 80px; */
-    
-        text-align: center;
-    }
+body > h1 {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 10px;
+
+    text-align: center;
 }
 
 #main {
@@ -41,74 +51,42 @@ body {
 
     width: 400px;
     height: 100%;
-    
-    /* background-image: url("./mouth.jpg"); */
+
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
+}
+#left > h1 {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 20px 0;
 
-    & > h1 {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 20px 0;
+    height: 80px;
 
-        height: 80px;
-
-        text-align: center;
-        
-        background-color: rgb(187, 241, 149);
-
-        /* opacity: 0.8; */
-    }
-
-    & #question {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-
-        width: 100%;
-        height: calc(100% - 80px);
-    }
+    text-align: center;
     
-    & img {
-
-        width: 80%;
-
-        object-fit: contain;
-
-        border-radius: 20px;
-        border: 2px solid black;
-    }
-    /* & .blks {
-        display: none;
-        
-        width: 50px;
-        height: 50px;
-        
-        opacity: 0.5;
-        
-        background-color: red;
-        
-    } */
+    background-color: rgb(187, 241, 149);
 }
 
+#left #question {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 
-/* 
-#s1-0 {
-    position: absolute;
-    bottom: 70px;
-    right: 80px;
-    
-    display: none;
-    
-    width: 240px;
-    height: 200px;
-    
-    background-color: rgb(66, 66, 66);
-    
-    opacity: 0.8;
-} */
+    width: 100%;
+    height: calc(100% - 80px);
+}
+
+#left img {
+
+    width: 80%;
+
+    object-fit: contain;
+
+    border-radius: 20px;
+    border: 2px solid black;
+}
 
 #right {
     position: relative;
@@ -120,85 +98,80 @@ body {
     
     background-color: rgb(128, 208, 255);
     
-    & > h1 {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 20px 0;
-        
-        height: 80px;
-        
-        text-align: center;
-        
-        background-color: rgb(107, 169, 204);
-        
-        /* opacity: 0.8; */
-    }
     
-    & > div {
-        display: flex;
-        /* flex-direction: column; */
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        align-items: flex-start;
-        
-        box-sizing: border-box;
-        padding: 40px;
-        
-        width: 100%;
-        height: calc(100% - 80px);
-        
-        /* background-color: rgb(128, 208, 255); */
-        
-        & > .s {
-            
-            box-sizing: border-box;
-            margin-right: 10px;
-            
-            width: auto;
-            height: 80px;
-            
-            border-radius: 10px;
-            
-            font-size: 20px;
-            
-            background-color: lightblue;
-        }
-    }
+}
+#right > h1 {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 20px 0;
     
-    & #submit {
-        position: absolute;
-        bottom: 20px;
-        right: 20px;
-        
-        display: none;
-        
-        width: 70px;
-        height: 30px;
-        
-        border-radius: 5px;
-        
-        font-size: 15px;
-        
-        background-color: rgb(252, 181, 59);
-    }
+    height: 80px;
+    
+    text-align: center;
+    
+    background-color: rgb(107, 169, 204);
+}
 
-    & #next {
-        position: absolute;
-        bottom: 20px;
-        right: 20px;
+#right > div {
+    display: flex;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
     
-        display: none;
+    box-sizing: border-box;
+    padding: 40px;
     
-        width: 100px;
-        /* height: 40px; */
+    width: 100%;
+    height: calc(100% - 80px);
+}
+#right > div > .s {
+        
+    box-sizing: border-box;
+    margin-right: 10px;
     
-        border-radius: 5px;
+    width: auto;
+    height: 80px;
     
-        font-size: 20px;
-        color: white;
+    border-radius: 10px;
     
-        background-color: rgb(74, 139, 0);
-    }
+    font-size: 20px;
+    
+    background-color: lightblue;
+}
+
+#right #submit {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    
+    display: none;
+    
+    width: 70px;
+    height: 30px;
+    
+    border-radius: 5px;
+    
+    font-size: 15px;
+    
+    background-color: rgb(252, 181, 59);
+}
+
+#right #next {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+
+    display: none;
+
+    width: 100px;
+
+    border-radius: 5px;
+
+    font-size: 20px;
+    color: white;
+
+    background-color: rgb(74, 139, 0);
 }
 
 #explain {
@@ -209,7 +182,7 @@ body {
     /* display: none; */
 
     box-sizing: border-box;
-    padding: 30px;
+    padding: 25px 30px;
 
     width: calc(100% - 40px);
     height: calc(100% - 40px);
@@ -218,25 +191,27 @@ body {
     border-radius: 30px;
 
     font-size: 40px;
-    color: white;
+    color: rgb(235, 215, 150);
 
     background-color: rgb(88, 88, 88);
 
     opacity: 0.99;
 
-    & > p {
-        margin: 0;
-        padding: 10px;
-        padding-top: 20px;
-        font-size: 20px;
-    }
+    
+}
 
-    & > span:last-of-type {
-        position: absolute;
-        bottom: 20px;
-        right: 20px;
+#explain > p {
+    margin: 0;
+    padding: 10px;
+    padding-top: 20px;
+    font-size: 20px;
+}
 
-        font-size: 20px;
-        color: rgb(168, 168, 168);
-    }
+#explain > span:last-of-type {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+
+    font-size: 20px;
+    color: rgb(168, 168, 168);
 }
