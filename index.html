@@ -3,41 +3,52 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="./index.css">
-        <script src="static/index.js"></script>
-        <script src="static/jquery-3.5.1.js"></script>
+        <script src="./index.js"></script>
+        <script src="./jquery-3.5.1.js"></script>
         <title> Home </title>
     </head>
 
     <body>
+        <h1>
+            CCST9072 Dental Disease Detection Mini Game
+        </h1>
         <div id="main">
             <div id="left">
-                <div class="blks">
+                <h1>
+                    Dental Disease Detection
+                </h1>
+                <div id="question">
+                    <img src="" alt="tooth">
+                    
                 </div>
-                <div class="blks">
-                </div>
-                <div class="blks">
-                </div>
-                <div class="blks">
-                </div>
-                <div class="blks">
-                </div>
-                <div class="blks">
-                </div>
-                <div class="blks">
-                </div>
-                <div class="blks">
-                </div>
-                <div class="blks">
-                </div>
-                <div class="blks">
-                </div>
-                <div class="blks">
-                </div>
-                <div class="blks">
-                </div>
-            </table>
-            <div id="right">
 
+            </div>
+            <div id="right">
+                <h1>
+                    What is this disease?
+                </h1>
+                <div>
+                    <button class="s" id="s0" >Heathy teeth</button>
+                    <button class="s" id="s1" >Tooth decay</button>
+                    <button class="s" id="s2" >Periodontal diseases</button>
+                    <button class="s" id="s3" >Recurrent aphthous ulcers (RAU)</button>
+                    <button class="s" id="s4" >Dental abscess</button>
+                    <button class="s" id="s5" >Pericoronitis</button>
+                </div>
+                <button id="submit">
+                    Submit
+                </button>
+                <button id="next">
+                    Next Question
+                </button>
+            </div>
+            <div id="explain">
+                <span>you are correct</span>
+                <br>
+                <span>Explanation:</span> 
+                <p>
+                </p>
+                <span>-- Click on the blank space to close --</span>
             </div>
         </div>
     </body>
